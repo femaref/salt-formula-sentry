@@ -34,7 +34,7 @@ SENTRY_USE_BIG_INTS = True
 # Instruct Sentry that this install intends to be run by a single organization
 # and thus various UI optimizations should be enabled.
 
-SENTRY_SINGLE_ORGANIZATION = False
+SENTRY_SINGLE_ORGANIZATION = True
 DEBUG = False
 SENTRY_BEACON = False
 
