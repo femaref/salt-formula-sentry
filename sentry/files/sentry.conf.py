@@ -146,7 +146,6 @@ SENTRY_FEATURES = {
 
 #SENTRY_ALLOW_ORIGIN = "*"
 
-"""
 # You should configure the absolute URI to Sentry. It will attempt to guess it if you don't
 # but proxies may interfere with this.
 {%- if server.bind.name is defined %}
@@ -162,4 +161,3 @@ ALLOWED_HOSTS = [
 
 SENTRY_REMOTE_TIMEOUT = 10
 SENTRY_REMOTE_URL = 'http://{{ server.bind.name }}/sentry/store/'
-"""
