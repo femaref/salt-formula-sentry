@@ -13,7 +13,7 @@ sentry_packages:
 sentry_env:
   virtualenv.manage:
   - name: {{ server.dir.base }}/env
-  - system_site_packages: True
+  - system_site_packages: False
   - requirements: salt://sentry/files/requirements.txt
   - require:
     - pkg: sentry_packages
