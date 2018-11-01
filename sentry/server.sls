@@ -63,5 +63,7 @@ sentry_dirs:
 sentry_schema_upgrade:
   cmd.run:
   - name: source {{ server.dir.base }}/env/bin/activate; SENTRY_CONF=/etc/sentry sentry upgrade
+  - onchanges:
+    - virtualenv: sentry_env
 
 {%- endif %}
