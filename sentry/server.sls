@@ -30,6 +30,7 @@ sentry_dirs:
   file.directory:
   - mode: 755
   - user: sentry
+  - group: sentry
   - makedirs: True
   - names:
     - {{ server.dir.base }}
@@ -44,6 +45,8 @@ sentry_dirs:
   file.managed:
   - source: salt://sentry/files/sentry.conf.py
   - mode: 644
+  - user: sentry
+  - group: sentry
   - template: jinja
   - require:
     - file: sentry_dirs
@@ -54,6 +57,8 @@ sentry_dirs:
   file.managed:
   - source: salt://sentry/files/config.yml
   - mode: 644
+  - user: sentry
+  - group: sentry
   - template: jinja
   - require:
     - file: sentry_dirs
